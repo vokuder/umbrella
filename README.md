@@ -18,6 +18,5 @@ npm run dev
 This step requires cordova and SDKs for your targeted platform. Please refer to the [cordova documentation]() for more instructions.
 <br>
 <br>
-Run `npm run build` to create the production vue application.
-<br>Afterwards the minified source code is placed into `www` directory.
+When running: `npm run build` the vue application source code gets minified and packaged for production into `www` directory.
 <br>Cordova will pickup files from `www` if you start the build process.
