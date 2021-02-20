@@ -1,21 +1,21 @@
 # Umbrella
+App to display weather conditions. 
 
 
-
-## Project setup
+## Setup:
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm i
 ```
 
-### Compiles and minifies for production
+
+### Run dev server:
+```
+npm run dev
+```
+
+
+### Create a production build:
+This step requires cordova and SDKs for your targeted platform.
 ```
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
