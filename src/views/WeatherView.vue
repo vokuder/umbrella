@@ -9,6 +9,8 @@
               rounded
               dense
               color="white--text"
+              v-model="locationSearchTerm"
+              @keyup="searchForLocation"
           ></v-text-field>
           <v-btn rounded class="mx-1 py-5">
             <v-icon color="grey">fa-search</v-icon>
@@ -48,6 +50,7 @@ export default {
   name: "WeatherView",
   data () {
     return {
+      locationSearchTerm: String(),
       forecastDays: [
         {title: "Monday", temp: 20, humidity: 60, windSpeed: 5},
         {title: "Tuesday", temp: 15, humidity: 70, windSpeed: 10},
@@ -56,5 +59,13 @@ export default {
       ]
     }
   },
+
+  methods: {
+    searchForLocation(event) {
+      if (event.code === "Enter") {
+        console.log(`Sending location search request for: ${this.locationSearchTerm}`)
+      }
+    }
+  }
 }
 </script>
