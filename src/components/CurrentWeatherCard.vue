@@ -11,10 +11,10 @@
 
     <v-card-text>
       <v-row align="center">
-        <v-col class="display-3" cols="6">
+        <v-col class="display-3" cols="8">
           {{$store.getters["weather/current/getTemperature"]}}&deg;C
         </v-col>
-        <v-col cols="6">
+        <v-col cols="4">
           <v-img :src="$store.getters['weather/current/getIconURL']" width="92"
           ></v-img>
         </v-col>
