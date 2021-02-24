@@ -1,5 +1,7 @@
 {
   "Wind": "Wind",
   "Humidity": "Luftfeuchte",
-  "Location ...": "Standort ..."
+  "Location ...": "Standort ...",
+  "Current": "Aktuell",
+  "Forecast": "Vorhersage"
 }
