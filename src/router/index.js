@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {path: "", redirect: "/weather"},
-  {path: "/weather", name: "WeatherView", component: WeatherView}
+  {path: "/weather", name: "WeatherView", component: WeatherView},
 ]
 
 

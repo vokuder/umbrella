@@ -2,7 +2,6 @@
   "name": "org.umbrella",
   "version": "1.0.0",
   "private": true,
-  "description": "",
   "author": {
     "name": "Jan-Michael Löhlein"
   },
@@ -13,6 +12,7 @@
   "main": "index.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "roboto-fontface": "*",
     "vue": "^2.6.11",

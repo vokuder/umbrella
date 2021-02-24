@@ -1,10 +1,8 @@
 node_modules
 www/
-
-# Log files
 npm-debug.log*
-
 .idea
 .vscode
 platforms/
 plugins/
+.env
