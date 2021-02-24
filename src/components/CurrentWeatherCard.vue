@@ -25,14 +25,14 @@
       <v-list-item-icon>
         <v-icon>fa-wind</v-icon>
       </v-list-item-icon>
-      <v-list-item-subtitle class="subtitle-1">Wind: {{$store.getters["weather/current/getWindSpeed"]}} km/h</v-list-item-subtitle>
+      <v-list-item-subtitle class="subtitle-1">{{$t("Wind")}}: {{$store.getters["weather/current/getWindSpeed"]}} km/h</v-list-item-subtitle>
     </v-list-item>
 
     <v-list-item>
       <v-list-item-icon>
         <v-icon>fa-water</v-icon>
       </v-list-item-icon>
-      <v-list-item-subtitle class="subtitle-1">Luftfeuchte: {{$store.getters["weather/current/getHumidity"]}} %</v-list-item-subtitle>
+      <v-list-item-subtitle class="subtitle-1">{{$t("Humidity")}}: {{$store.getters["weather/current/getHumidity"]}} %</v-list-item-subtitle>
     </v-list-item>
   </v-card>
 </template>
