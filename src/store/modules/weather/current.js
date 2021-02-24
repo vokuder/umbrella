@@ -5,11 +5,11 @@ export default {
   namespaced: true,
 
   state: {
-    description: "Warm",
-    humidity: 60,
-    temperature: 20,
-    iconURL: "",
-    windSpeed: 5
+    description: null,
+    humidity: null,
+    temperature: null,
+    iconURL: null,
+    windSpeed: null
   },
 
   mutations: {
@@ -53,6 +53,17 @@ export default {
 
     getWindSpeed: state => {
       return state.windSpeed
+    },
+  },
+
+  actions: {
+    async getCurrentWeatherData({ commit, rootState }) {
+      let currentWeather = await openWeatherMapClient.getCurrentWeather(rootState.weather.locationName)
+      commit("setDescription", currentWeather["weather"][0]["description"])
+      commit("setHumidity", currentWeather["main"]["humidity"])
+      commit("setTemperature", Math.round(currentWeather["main"]["temp"]))
+      commit("setWindSpeed", currentWeather["wind"]["speed"])
+      commit("setIconURL", openWeatherMapClient.getWeatherIconUrl(currentWeather["weather"][0]["icon"]))
     }
   }
 }

@@ -13,6 +13,8 @@ class OpenWeatherMapClient {
 
   async sendRequest(methodCall) {
     let url = `${this.apiUrl}/data/${this.apiVersion}/${methodCall}&appid=${this.apiKey}&lang=${this.language}&units=${this.units}`
+    console.log(url)
+
     let response = await axios.get(url)
     return response.data
   }

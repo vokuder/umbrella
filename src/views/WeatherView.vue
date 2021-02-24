@@ -27,6 +27,9 @@ import CurrentWeatherCard from "@/components/CurrentWeatherCard";
 
 export default {
   name: "WeatherView",
-  components: {CurrentWeatherCard}
+  components: {CurrentWeatherCard},
+  mounted() {
+    this.$store.dispatch("weather/current/getCurrentWeatherData")
+  }
 }
 </script>
