@@ -5,4 +5,5 @@ npm-debug.log*
 .vscode
 platforms/
 plugins/
-.env
+.env.development
+.env.production

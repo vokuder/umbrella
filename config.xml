@@ -4,6 +4,7 @@
     <icon src="src/assets/icon.png"/>
     <author href="https://github.com/vokuder">Jan-Michael Löhlein</author>
     <content src="index.html" />
-    <access origin="*" />
+    <access origin="https://api.openweathermap.org"/>
+    <access origin="https://openweathermap.org"/>
     <allow-intent href="geo:*" />
 </widget>
