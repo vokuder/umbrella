@@ -2,20 +2,8 @@
   <v-app>
     <v-main>
       <v-container fluid>
-        <v-row no-gutters class="mt-1">
-          <v-text-field
-              placeholder="Location ..."
-              filled
-              rounded
-              dense
-              color="white--text"
-          ></v-text-field>
-          <v-btn rounded class="mx-1 py-5">
-            <v-icon color="grey">fa-search</v-icon>
-          </v-btn>
-        </v-row>
-
-        <CurrentWeatherCard></CurrentWeatherCard>
+        <LocationSearchForm></LocationSearchForm>
+        <CurrentWeatherCard v-if="$store.getters['weather/current/dataAvailable']"></CurrentWeatherCard>
       </v-container>
     </v-main>
   </v-app>
@@ -23,13 +11,11 @@
 
 <script>
 import CurrentWeatherCard from "@/components/CurrentWeatherCard";
+import LocationSearchForm from "@/components/LocationSearchForm";
 
 
 export default {
   name: "WeatherView",
-  components: {CurrentWeatherCard},
-  mounted() {
-    this.$store.dispatch("weather/current/getCurrentWeatherData")
-  }
+  components: {LocationSearchForm, CurrentWeatherCard},
 }
 </script>

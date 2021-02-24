@@ -9,7 +9,9 @@ export default {
     humidity: null,
     temperature: null,
     iconURL: null,
-    windSpeed: null
+    windSpeed: null,
+    date: null,
+    dataAvailable: false
   },
 
   mutations: {
@@ -31,6 +33,14 @@ export default {
 
     setWindSpeed(state, windSpeed) {
       state.windSpeed = windSpeed
+    },
+
+    setDate(state, date) {
+      state.date = date
+    },
+
+    setDataAvailability(state, available) {
+      state.dataAvailable = available
     }
   },
 
@@ -54,6 +64,14 @@ export default {
     getWindSpeed: state => {
       return state.windSpeed
     },
+
+    getDate: state => {
+      return state.date
+    },
+
+    dataAvailable: state => {
+      return state.dataAvailable
+    }
   },
 
   actions: {
@@ -64,6 +82,9 @@ export default {
       commit("setTemperature", Math.round(currentWeather["main"]["temp"]))
       commit("setWindSpeed", currentWeather["wind"]["speed"])
       commit("setIconURL", openWeatherMapClient.getWeatherIconUrl(currentWeather["weather"][0]["icon"]))
+      commit("setDate", new Date().toDateString())
+
+      commit("setDataAvailability", true)
     }
   }
 }

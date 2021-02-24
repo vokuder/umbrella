@@ -9,8 +9,7 @@ export default {
   },
 
   state: {
-    locationName: "Rethen",
-    date: new Date().toDateString()
+    locationName: null,
   },
 
   mutations: {

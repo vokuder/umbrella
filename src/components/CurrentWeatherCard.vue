@@ -5,7 +5,7 @@
         <v-list-item-title class="headline">
           {{$store.getters["weather/getLocationName"]}}
         </v-list-item-title>
-        <v-list-item-subtitle>{{$store.getters["weather/getDate"]}}, {{$store.getters["weather/current/getDescription"]}}</v-list-item-subtitle>
+        <v-list-item-subtitle>{{$store.getters["weather/current/getDate"]}}, {{$store.getters["weather/current/getDescription"]}}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 
