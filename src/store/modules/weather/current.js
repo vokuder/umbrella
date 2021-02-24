@@ -76,6 +76,8 @@ export default {
 
   actions: {
     async getCurrentWeatherData({ commit, rootState }) {
+      rootState.loading_spinner.active = true
+
       let currentWeather = await openWeatherMapClient.getCurrentWeather(rootState.weather.locationName)
       commit("setDescription", currentWeather["weather"][0]["description"])
       commit("setHumidity", currentWeather["main"]["humidity"])
@@ -85,6 +87,7 @@ export default {
       commit("setDate", new Date().toDateString())
 
       commit("setDataAvailability", true)
+      rootState.loading_spinner.active = false
     }
   }
 }
